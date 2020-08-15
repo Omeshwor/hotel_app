@@ -35,6 +35,7 @@ group :development, :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'shoulda-matchers', '~> 4.3'
+  gem 'factory_bot_rails'
 end
 
 group :development do

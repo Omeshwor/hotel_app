@@ -34,7 +34,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
-  
+  gem 'shoulda-matchers', '~> 4.3'
 end
 
 group :development do

@@ -1,0 +1,41 @@
+.navbar {
+//   height: 50px;
+  background-color: #e87f07;
+  border-radius: 100px;
+}
+.row {
+  margin-top: 5px;
+  height: 90vh;
+}
+.left-col {
+  padding-top: 10px;
+  background-color: #e87f07;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.left-col a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #33ffff;
+  display: block;
+}
+
+.right-col {
+  border-radius: 5px;
+  padding-top: 10px;
+  background-color: #e87f07;
+  border: 1px solid blue;
+}
+
+.left-col a:hover {
+  color: #66ff33;
+}
+
+
+.center-col {
+  border: 1px dotted blue;
+  border-radius: 10px;
+  text-align: center;
+}

@@ -23,8 +23,8 @@
         <%= link_to "text", root_path %>
       </div>
       <div class="col-7 center-col">
-        <h1>WELCOME TO HOTEL</h1>
-        <button>New Room</button>
+        <%= render "layouts/messages" %>
+        <%= yield %>
       </div>
       <div class="col-3 right-col">
         <p>Menu</p>
@@ -35,6 +35,6 @@
         </ol>
       </div>
     </div>
-    <%= yield %>
+    
   </body>
 </html>

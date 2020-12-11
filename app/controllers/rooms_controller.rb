@@ -20,6 +20,12 @@ class RoomsController < ApplicationController
     end
   end
 
+  def show
+    @rooms = Room.all
+    @room = Room.find(params[:id])
+  end
+
+
   private
   def room_params
     params.require(:room).permit(:title, :description, images: [])

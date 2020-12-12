@@ -1,8 +1,13 @@
 <h1><%= @room.title %></h1>
-<% if @room.images.attached? %>
+<%
+=begin%>
+ <% if @room.images.attached? %>
   <% @room.images.each do |image| %>
     <li>
      <img src="<%= (url_for(image)) %>" />
     </li>
   <% end %>
-<% end %>
+<% end %> 
+<%
+=end%>
+<%= carousel_for(@room.images) %>

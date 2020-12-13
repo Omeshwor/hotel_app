@@ -1,13 +1,16 @@
-<h1><%= @room.title %></h1>
-<%
-=begin%>
- <% if @room.images.attached? %>
-  <% @room.images.each do |image| %>
-    <li>
-     <img src="<%= (url_for(image)) %>" />
-    </li>
-  <% end %>
-<% end %> 
-<%
-=end%>
-<%= carousel_for(@room.images) %>
+<div class="card" style="width: 100%">
+  <%= carousel_for(@room.images) %>
+  <div class="card-body">
+    <h5 class="card-title"><%= @room.title %></h5>
+    <p class="card-text"><%= @room.description %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <%= link_to "Edit Room", edit_room_path(@room), class:"btn btn-info" %>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>

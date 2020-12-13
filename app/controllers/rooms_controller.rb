@@ -20,11 +20,27 @@ class RoomsController < ApplicationController
     end
   end
 
+  def edit
+    @rooms = Room.all
+    @room = Room.find(params[:id])
+  end
+
   def show
     @rooms = Room.all
     @room = Room.find(params[:id])
   end
 
+  def update
+    @room = Room.find(params[:id])
+      if @room.update(room_params)
+        flash[:notice] = "Room was successfully updated"
+        redirect_to @room
+      else
+        flash[:alert] = "Something went wrong"
+        render 'edit'
+      end
+  end
+  
 
   private
   def room_params

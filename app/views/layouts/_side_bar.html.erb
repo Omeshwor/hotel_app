@@ -1,5 +1,9 @@
 <div class="col-2 left-col">
-        <% @rooms.each do |room| %>
-          <a href="<%= room_path(room) %>"><%= room.title %></a>
-        <% end %>
-      </div>
+  <% if @rooms.exists? %>
+    <% @rooms.each do |room| %>
+      <a href="<%= room_path(room) %>"><%= room.title %></a>
+    <% end %>
+  <% else %>
+    <p>No Rooms to display</p>
+  <% end %>
+</div>

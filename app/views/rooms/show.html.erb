@@ -11,6 +11,6 @@
   </ul>
   <div class="card-body">
     <%= link_to "Edit Room", edit_room_path(@room), class:"btn btn-info" %>
-    <a href="#" class="card-link">Another link</a>
+    <%= link_to "Delete Room", room_path(@room), class:"btn btn-danger", method: :delete, data: { confirm: "Are you sure?"} %>
   </div>
 </div>

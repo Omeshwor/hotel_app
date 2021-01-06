@@ -14,8 +14,10 @@
 
     <div id="collapse<%= room.id %>" class="collapse" aria-labelledby="<%= room.id %><%= room.title %>" data-parent="#accordionExample">
       <div class="card-body">
-        <%= room.description %>
+        <h5 class="card-title"><%= room.description %></h5>
+        <%= link_to  "Show Room", room_path(room), class: "btn btn-primary" %>
       </div>
+      
     </div>
   </div>
   <% end %>

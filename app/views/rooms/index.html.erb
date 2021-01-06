@@ -1,2 +1,23 @@
 <h1>WELCOME TO HOTEL</h1>
+
 <%= link_to "New Room", new_room_path, class: "btn btn-primary" %>
+<div class="accordion" id="accordionExample">
+  <% @rooms.each do |room| %>
+  <div class="card">
+    <div class="card-header" id="<%= room.id %><%= room.title %>">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse<%= room.id %>" aria-expanded="false" aria-controls="collapse<% room.id %>">
+          <%= room.title %>
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse<%= room.id %>" class="collapse" aria-labelledby="<%= room.id %><%= room.title %>" data-parent="#accordionExample">
+      <div class="card-body">
+        <%= room.description %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+

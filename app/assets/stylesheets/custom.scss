@@ -15,7 +15,7 @@ $secondary-color: #33ffff;
   background-color: $primary-color;
   border: 1px solid black;
   border-radius: 5px;
-  height: 80vh;
+  height: 80vh auto;
 }
 
 .left-col a {
@@ -31,7 +31,7 @@ $secondary-color: #33ffff;
   padding-top: 10px;
   background-color: $primary-color;
   border: 1px solid blue;
-  height: 80vh;
+  height: 80vh auto;
 }
 
 .left-col a:hover {
@@ -42,9 +42,11 @@ $secondary-color: #33ffff;
   border: 1px dotted blue;
   border-radius: 10px;
   text-align: center;
+  height: 80vh auto;
 }
 
 .footer {
+  width: auto;
   background-color: $primary-color;
   border: 1px solid blue;
   border-radius: 5px;
